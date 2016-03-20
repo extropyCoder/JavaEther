@@ -1,4 +1,4 @@
-package com.ethercamp.starter;
+package io.extropy.tutorial;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

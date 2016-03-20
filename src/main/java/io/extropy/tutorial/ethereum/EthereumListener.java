@@ -1,4 +1,4 @@
-package com.ethercamp.starter.ethereum;
+package io.extropy.tutorial.ethereum;
 
 import org.ethereum.core.Block;
 import org.ethereum.core.TransactionReceipt;
