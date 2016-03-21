@@ -1,7 +1,7 @@
 ## Java Ethereum Tutorial
 
 ```
-git clone https://github.com/extropyCoder/JavaEthereumTutorial
+git clone https://github.com:extropyCoder/JavaEther.git
 ./gradlew run
 ```
 
