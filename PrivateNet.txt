@@ -1,0 +1,21 @@
+genesis.json
+{
+    "nonce": "0x0000000000000042",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "difficulty": "0x0100",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "Custom Genesis Block",
+    "gasLimit": "0xffffffff"
+}
+`
+`
+mkdir data
+  
+`
+[
+"enode://973aab3035d5b4f654d4a5cee56d8f28597c726c0cd490242e1409138e41f5bd494d2ab800b308bf5914803994638d39f4ebbbddbde6da148732b088a05aa13a@108.61.197.31:30303"
+]
+
+geth --datadir "./data" --networkid 2016101 console 2>geth.log
