@@ -1,7 +1,6 @@
-package io.extropy.tutorial;
+package io.extropy.JavaEther;
 
-
-import io.extropy.tutorial.ethereum.EthereumBean;
+import io.extropy.JavaEther.ethereum.EthereumBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

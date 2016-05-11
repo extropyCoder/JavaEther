@@ -1,4 +1,4 @@
-package io.extropy.tutorial;
+package io.extropy.JavaEther;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

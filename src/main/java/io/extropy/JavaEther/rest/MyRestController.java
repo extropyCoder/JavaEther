@@ -1,8 +1,7 @@
-package io.extropy.tutorial.rest;
+package io.extropy.JavaEther.rest;
 
 
-
-import io.extropy.tutorial.ethereum.EthereumBean;
+import io.extropy.JavaEther.ethereum.EthereumBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

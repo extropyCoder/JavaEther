@@ -1,4 +1,4 @@
-package io.extropy.tutorial.ethereum;
+package io.extropy.JavaEther.ethereum;
 
 import org.ethereum.facade.Ethereum;
 import org.ethereum.facade.EthereumFactory;
