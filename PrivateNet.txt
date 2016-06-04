@@ -1,27 +1,7 @@
  I'm assuming you have the geth console installed.
-
-create a working directory called for example testServer
-
-in that directory create a file named genesis.json containing the following
-{
-"nonce": "0x0000000000000042",
-"mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-"difficulty": "0x0100",
-"coinbase": "0x0000000000000000000000000000000000000000",
-"timestamp": "0x00",
-"parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-"extraData": "Custom Genesis Block",
-"gasLimit": "0xffffffff"
-}
-
-create a directory in the testServer directory called data
-in the data directory create a file called static-nodes.json containing the following
-[
-"enode://973aab3035d5b4f654d4a5cee56d8f28597c726c0cd490242e1409138e41f5bd494d2ab800b308bf5914803994638d39f4ebbbddbde6da148732b088a05aa13a@108.61.197.31:30303"
-]
-
-move back to the testServer directory and start geth with this command
-geth --datadir "./data" --genesis genesis.json --networkid 2016101 console
+Download and extract the testServer.zip into a suitable location
+in the testServer directory and start geth with this command
+geth --datadir "./data" --genesis genesis.json --networkid 2016102 console
 this should then connect to the private network peer.
 in the geth console you can create an account with
 personal.NewAccount()
