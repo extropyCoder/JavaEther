@@ -3,6 +3,9 @@
 
     "39fa3a0388d851fbf31eacf89b1e48daf0d11ab7": {
       "balance": "10000000000000000000000000"
+    },
+    "cd2a3d9f938e13cd947ec05abc7fe734df8dd826": {
+      "balance": "100000000000000000"
     }
 
   },
@@ -14,5 +17,5 @@
   "timestamp": "0x00",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "extraData": "0x00",
-  "gasLimit": "0xffffffff"
+  "gasLimit": "0x1388"
 }
