@@ -1,4 +1,4 @@
-package com.ethercamp.starter.ethereum;
+package io.extropy.ethereum;
 
 import org.ethereum.core.Block;
 import org.ethereum.core.TransactionReceipt;
@@ -21,7 +21,7 @@ public class EthereumListener extends EthereumListenerAdapter {
     @Override
     public void onBlock(Block block, List<TransactionReceipt> receipts) {
         System.out.println();
-        System.out.println("Do something on block: " + block.getNumber());
+        System.out.println("Block Received: " + block.getNumber());
 
         if (syncDone)
             calcNetHashRate(block);
@@ -48,12 +48,12 @@ public class EthereumListener extends EthereumListenerAdapter {
      */
     private void calcNetHashRate(Block block){
 
-        if ( block.getNumber() > 1000){
+        if ( block.getNumber() > 100){
 
             long avgTime = 1;
             long cumTimeDiff = 0;
             Block currBlock = block;
-            for (int i=0; i < 1000; ++i){
+            for (int i=0; i < 100; ++i){
 
                 Block parent = ethereum.getBlockchain().getBlockByHash(currBlock.getParentHash());
                 long diff = currBlock.getTimestamp() - parent.getTimestamp();

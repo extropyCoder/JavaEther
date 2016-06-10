@@ -1,6 +1,6 @@
-package com.ethercamp.starter;
+package io.extropy;
 
-import com.ethercamp.starter.ethereum.EthereumBean;
+import io.extropy.ethereum.EthereumBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

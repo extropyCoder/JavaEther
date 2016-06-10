@@ -1,4 +1,4 @@
-package com.ethercamp.starter.ethereum;
+package io.extropy.ethereum;
 
 import org.ethereum.facade.Ethereum;
 import org.ethereum.facade.EthereumFactory;
