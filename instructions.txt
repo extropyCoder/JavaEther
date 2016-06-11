@@ -1,6 +1,0 @@
-Download project
-? set up geth node
-? add a contract
-start main node, get inode address https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#adminnodeinfo
-put this in properties file 
-
