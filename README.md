@@ -6,4 +6,4 @@ git clone https://github.com:extropyCoder/JavaEther.git
 Run applications against the currency contract 
 
 If you want to run the geth client unzip the testServer.zip
-Move into the testServer directory, follow the instructions in private Network.txt
+Move into the testServer directory, follow the instructions in privateNet.txt
