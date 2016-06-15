@@ -1,7 +1,9 @@
  I'm assuming you have the geth console installed.
 Download and extract the testServer.zip into a suitable location
 in the testServer directory and start geth with this command
+
 geth --genesis genesis.json --datadir data --networkid 2016202 --nodiscover --ipcpath ~/.ethereum/geth.ipc console 2>geth.log
+
 this should then connect to the private network peer.
 in the geth console you can create an account with
 personal.NewAccount()
