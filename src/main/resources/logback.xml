@@ -55,14 +55,14 @@
     <logger level="DEBUG" name="blockchain"/>
     <logger level="DEBUG" name="mine"/>
     <logger level="DEBUG" name="discover"/>
-    <logger level="ERROR" name="java.nio"/>
-    <logger level="ERROR" name="io.netty"/>
-    <logger level="ERROR" name="wire"/>
-    <logger level="ERROR" name="VM"/>
-    <logger level="ERROR" name="trie"/>
-    <logger level="ERROR" name="state"/>
+    <logger level="DEBUG" name="java.nio"/>
+    <logger level="DEBUG" name="io.netty"/>
+    <logger level="DEBUG" name="wire"/>
+    <logger level="DEBUG" name="VM"/>
+    <logger level="DEBUG" name="trie"/>
+    <logger level="DEBUG" name="state"/>
     <logger level="DEBUG" name="execute"/>
-    <logger level="ERROR" name="rlp"/>
+    <logger level="DEBUG" name="rlp"/>
 
 
 </configuration>

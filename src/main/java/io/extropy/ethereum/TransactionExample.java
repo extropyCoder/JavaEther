@@ -42,8 +42,8 @@ public class TransactionExample extends EthereumListenerAdapter {
         System.err.println(" ~~~ SYNC DONE ~~~ ");
         if (startedTxBomb){
             byte[] sender = Hex.decode("cd2a3d9f938e13cd947ec05abc7fe734df8dd826");
-           // long nonce = ethereum.getRepository().getNonce(sender).longValue();;
-            long nonce = 500;
+            long nonce = ethereum.getRepository().getNonce(sender).longValue();;
+           // long nonce = 500;
            BigInteger bal =  ethereum.getRepository().getBalance(sender);
            System.err.println(" balance is " + bal);
 
@@ -75,7 +75,7 @@ public class TransactionExample extends EthereumListenerAdapter {
     private void sendTx(long nonce){
 
         byte[] gasPrice = longToBytesNoLeadZeroes(ethereum.getGasPrice());
-        byte[] gasLimit = longToBytesNoLeadZeroes(21000);
+        byte[] gasLimit = longToBytesNoLeadZeroes(2100);
 
         byte[] toAddress = Hex.decode("39fa3a0388d851fbf31eacf89b1e48daf0d11ab7");
         byte[] value = longToBytesNoLeadZeroes(10);
