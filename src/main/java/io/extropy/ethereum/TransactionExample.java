@@ -34,16 +34,11 @@ public class TransactionExample extends EthereumListenerAdapter {
 
     @Override
     public void onSyncDone() {
-
-        // We will send transactions only
-        // after we have the full chain syncs
-        // - in order to prevent old nonce usage
         startedTxBomb = true;
         System.err.println(" ~~~ SYNC DONE ~~~ ");
         if (startedTxBomb){
             byte[] sender = Hex.decode("cd2a3d9f938e13cd947ec05abc7fe734df8dd826");
             long nonce = ethereum.getRepository().getNonce(sender).longValue();;
-           // long nonce = 500;
            BigInteger bal =  ethereum.getRepository().getBalance(sender);
            System.err.println(" balance is " + bal);
 
@@ -60,16 +55,6 @@ public class TransactionExample extends EthereumListenerAdapter {
     @Override
     public void onBlock(Block block, List<TransactionReceipt> receipts) {
 
-//        if (startedTxBomb){
-//            byte[] sender = Hex.decode("cd2a3d9f938e13cd947ec05abc7fe734df8dd826");
-//            long nonce = ethereum.getRepository().getNonce(sender).longValue();;
-//
-//            for (int i=0; i < 5; ++i){
-//                sendTx(nonce);
-//                ++nonce;
-//                sleep(10);
-//            }
-//        }
     }
 
     private void sendTx(long nonce){
