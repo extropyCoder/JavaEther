@@ -36,20 +36,18 @@ public class TransactionExample extends EthereumListenerAdapter {
     public void onSyncDone() {
         startedTxBomb = true;
         System.err.println(" ~~~ SYNC DONE ~~~ ");
-        if (startedTxBomb){
-            byte[] sender = Hex.decode("cd2a3d9f938e13cd947ec05abc7fe734df8dd826");
-            long nonce = ethereum.getRepository().getNonce(sender).longValue();;
-           BigInteger bal =  ethereum.getRepository().getBalance(sender);
-           System.err.println(" balance is " + bal);
+        byte[] sender = Hex.decode("cd2a3d9f938e13cd947ec05abc7fe734df8dd826");
+        long nonce = ethereum.getRepository().getNonce(sender).longValue();
+        ;
+        BigInteger bal = ethereum.getRepository().getBalance(sender);
+        System.err.println(" balance is " + bal);
 
-            for (int i=0; i < 2; ++i){
-                sendTx(nonce);
-                System.err.println(" nonce is " + nonce);
-                ++nonce;
-                sleep(10);
-            }
+        for (int i = 0; i < 2; ++i) {
+            sendTx(nonce);
+            System.err.println(" nonce is " + nonce);
+            ++nonce;
+            sleep(10);
         }
-
     }
 
     @Override
@@ -57,7 +55,7 @@ public class TransactionExample extends EthereumListenerAdapter {
 
     }
 
-    private void sendTx(long nonce){
+    private void sendTx(long nonce) {
 
         byte[] gasPrice = longToBytesNoLeadZeroes(ethereum.getGasPrice());
         byte[] gasLimit = longToBytesNoLeadZeroes(2100);
@@ -74,13 +72,15 @@ public class TransactionExample extends EthereumListenerAdapter {
 
         byte[] privKey = sha3("cow".getBytes());
         tx.sign(privKey);
-
         ethereum.getChannelManager().sendTransaction(Collections.singletonList(tx), null);
         System.err.println("Sending tx: " + Hex.toHexString(tx.getHash()));
     }
 
-    private void sleep(int millis){
-        try {Thread.sleep(millis);}
-        catch (InterruptedException e) {e.printStackTrace();}
+    private void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
