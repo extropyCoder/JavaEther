@@ -1,11 +1,38 @@
- I'm assuming you have the geth console installed.
-Download and extract the testServer.zip into a suitable location
-in the testServer directory and start geth with this command
+I'm assuming you have the geth console installed.
 
-geth --genesis genesis.json --datadir data --networkid 2016202 --nodiscover --ipcpath ~/.ethereum/geth.ipc console 2>geth.log
+In a directory of your choice unzip testServer.zip
+This will create a directory named testServer
 
-this should then connect to the private network peer.
+move into the testServer directory and initialise geth with this command
+
+
+geth --datadir data init genesis.json
+
+
+then start geth with
+
+
+geth --datadir data --networkid 20160720 --ipcpath < path to ipc file> console 2>geth.log
+
+
+replacing < path to ipc file> as follows :
+
+~/Library/Ethereum/geth.ipc for Mac
+or ~/.ethereum/geth.ipc for Linux
+or ~/AppData/Roaming/Ethereum/geth.ipc for Windows
+
+If you start geth with the ipc flag, then your Ethereum wallet will connect to your geth instance and hence the private network which is useful but not necessary
+
+You should then be connected to the private network and you will see block synchronisation
+If you are using the wallet you can use the GUI to create accounts and contracts
+otherwise
 in the geth console you can create an account with
-personal.NewAccount()
+personal.newAccount()
 then start mining with
-miner.start(1) 
+miner.start()
+
+
+If you want to use rpc and unlock your account you can run
+
+
+geth --datadir data --networkid 20160720 --ipcpath < path to ipc file> --rpc --rpcaddr=localhost --rpcport=8545 --rpccorsdomain "*" --unlock 0 console 2>geth.log
