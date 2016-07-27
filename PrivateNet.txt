@@ -1,6 +1,7 @@
 I'm assuming you have the geth console installed.
 
-In a directory of your choice unzip testServer.zip
+In a directory of your choice unzip the following file
+Test Server
 This will create a directory named testServer
 
 move into the testServer directory and initialise geth with this command
